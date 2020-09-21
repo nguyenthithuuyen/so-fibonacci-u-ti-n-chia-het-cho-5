@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="num"/>
+<button onclick="fibonacci()">kiểm tra</button>
+<p id="result"></p>
+        <script>
+        function fibonacci() {
+            let num=parseInt(document.getElementById('num').value);
+            let x = 0;
+            let str='';
+            let y = 1;
+            let result = x+y;
+            let i=0;
+
+            while (i< num){
+                result=x+y;
+                x=y;
+                y=result;
+
+                if ( (result % 5) == 0) {
+                    document.write(result);
+                    break;
+                }
+                i++;
+            }
+        }
+</script>
+</body>
+</html>
